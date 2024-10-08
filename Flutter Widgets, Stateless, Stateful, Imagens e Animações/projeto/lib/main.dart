@@ -31,8 +31,10 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        home: Container(
+          color: Colors.grey,
+          child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Stack(
               alignment: AlignmentDirectional.center,
@@ -98,8 +100,14 @@ class MyApp extends StatelessWidget {
                   width: 50,
                 ),
               ],
-            )
+            ),
+            Container(
+              color: Colors.amber, height: 30, width: 300,
+              child: Text("Diamante amarelo", style: TextStyle(color: Colors.black,fontSize: 30),textAlign: TextAlign.center,),
+            ),
+            ElevatedButton(onPressed: (){print("apertou o botãozinho");},
+             child: Text("botao"))
           ],
-        ));
+        )));
   }
 }
